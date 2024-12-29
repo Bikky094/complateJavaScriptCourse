@@ -31,7 +31,8 @@ const user = {
 
 
 const chai = ()=>{
-    // let username = "Bikky"
+    let username = "Bikky"
+    console.log(username)
     console.log(this)
 }
 
@@ -50,10 +51,11 @@ const chai = ()=>{
 
 // const addTwo = (num1, num2) =>  (num1 + num2)
 
-const addTwo = (num1, num2) =>  ({username: "BikkySingh"})
+
+// const addTwo = (num1, num2) =>  ({name : "BikkySingh"})
 
 
-console.log(addTwo(5, 6))
+console.log(addTwo(5, 8))
 
 
 
