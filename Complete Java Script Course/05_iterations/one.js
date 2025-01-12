@@ -68,4 +68,3 @@ console.log(i)
 //     console.log(`Value of index is ${index}`)
     
 // }
-

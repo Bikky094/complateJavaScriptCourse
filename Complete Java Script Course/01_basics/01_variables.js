@@ -21,4 +21,3 @@ because of issue in block scope and function scope
 console.log(accountId);
 
 console.table([accountId,accountEmail,accountpassword,accountCity,accountState])    // table se multipalye variable ko console se log karke print kiya ja sakta hai 
-

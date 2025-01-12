@@ -1,3 +1,4 @@
+
 //        {}           curly braces ko hi scope kaha jata hai             
 
 // var c = 300

@@ -1,0 +1,47 @@
+.box{
+    border: 2px solid black;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.containe{
+    height: 80vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#red{
+    background-color: red;
+}
+
+#yellow{
+    background-color: yellow;
+
+}
+
+#grey{
+    background-color: grey;
+
+}
+
+#green{
+    background-color: green;
+
+}
+
+#blue{
+    background-color: blue;
+
+}
+
+#white{
+    background-color: white;
+}

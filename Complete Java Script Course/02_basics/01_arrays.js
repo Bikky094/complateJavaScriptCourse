@@ -43,4 +43,3 @@ console.log(myArr.includes(0))
 
 // console.log(myn2)
 
-
