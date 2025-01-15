@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Cars image</h2>
+    <div>
+        <ul id="images">
+
+            <li><img width="200px" id="bmw_m5"
+                    src="https://wallpapers.com/images/hd/bmw-tablet-wallpaper-kboi281rfxy0y6nb.jpg" alt=""></li>
+
+            <li><img width="200px" id="porche_911"
+                    src="https://www.motortrend.com/files/667c8b6f08d8e8000842c179/001-2024-porsche-911-gt3rs-lead.jpg"
+                    alt=""></li>
+                    
+            <li><img width="200px" id="lamborghini"
+                    src="https://i.pinimg.com/736x/62/b4/99/62b4991e1a2b3efc4bf75fc6646c1032.jpg" alt=""></li>
+
+            <li><img width="200px" id="dodge_challenger"
+                    src="https://i.pinimg.com/originals/2c/fa/bd/2cfabdfc47bd3ffb1bf98591bb50a80e.jpg" alt=""></li>
+
+            <li><img width="200px" id="supra_mk4" src="https://live.staticflickr.com/8634/16203759102_711dbeca7e_z.jpg"
+                    alt=""></li>
+
+            <li><a style="color: aliceblue;" href="https://www.google.com/" id="google">google link</a></li>
+        </ul>
+    </div>
+
+</body>
+<script>
+
+
+
+    
+
+//    this is old style         // document.getElementById('lamborghini').onclick = function(){
+                                //     alert(' lamborghini Clicked')
+                                //    }
+
+
+// attacheEvent()
+// jQuery - on                           
+
+
+
+    // document.getElementById('lamborghini').addEventListener('click', function(){
+    //     alert('lamborghini clicked')
+    // }, false)
+
+
+    
+    //  type,  timestamp,  preventDefault,
+    //  target,  toElement,  srcElement,  currentTaget
+    //  clientX,  clientY,  screenX,  screenY
+    //  altkey,  ctrlkey,  shiftkey,  keyCode
+
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     // e.preventDefault
+    //     console.log('clicked inside the ul')
+    // }, true)                                          ------- //    capturing use case
+
+    // document.getElementById('lamborghini').addEventListener('click', function(e){
+    //     // e.preventDefault
+    //     console.log('lamborghini clicked')
+    // }, true)                                            ------- //    capturing use case
+ 
+
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     // e.preventDefault
+    //     console.log('clicked inside the ul')
+    // }, true)                                           -------//    bubbling use case
+
+    // document.getElementById('lamborghini').addEventListener('click', function(e){
+    //     // e.preventDefault
+    //     console.log('lamborghini clicked')
+    // }, true)                                             -------//    bubbling use case
+ 
+
+
+
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log('clicked inside the ul')
+    // }, false)
+
+    // document.getElementById('lamborghini').addEventListener('click', function(e){
+    //     console.log('lamborghini clicked')
+    //     e.stopPropagation()
+    // }, false)
+ 
+
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     console.log('google clicked')
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    // }, false)
+
+                                
+    document.querySelector('#images').addEventListener('click' , function(e){
+        // console.log(e.target.parentNode)
+        console.log(e.target.tagName)
+
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode
+            removeIt.remove(removeIt)
+        }
+      
+
+        // removeIt.parentNode.removeChild(removeIt)
+
+
+    }, false)
+
+    
+    
+    
+    
+    
+    
+</script>
+
+</html>
