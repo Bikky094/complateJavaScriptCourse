@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>three html file</title>
+</head>
+<body>
+    <h1>Chai aur java scipt</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+// setInterval(function(){
+//     console.log('Bikky', Date.now())
+// }, 1000)
+
+
+// const nameAurBikky = function(){
+//     console.log("BikkySingh", Date.now())
+// }
+// setInterval(nameAurBikky, 1000)
+
+
+// const nameAurBikky = function(str){                                      //    str()  Add 
+//     console.log(str , Date.now())
+// }
+// const intervalId = setInterval(nameAurBikky, 1000, 'Bikky')
+
+// clearInterval(intervalId)
+
+
+
+
+const nameAndDate = function(){
+    console.log('BikkySingh', Date.now())
+}
+
+
+
+const start = document.querySelector('#start')
+const stop =  document.querySelector('#stop')
+
+start.addEventListener('click', function(){
+    const clearIntervalId = setInterval(nameAndDate, 500)
+    stop.addEventListener('click', function(){
+        clearInterval(clearIntervalId)
+    })
+})
+
+
+
+</script>
+</html>

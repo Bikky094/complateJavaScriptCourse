@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+    <style>
+        h1 {
+            border: 1px solid black;
+            width: 400px;
+            text-align: center;
+            background-color: grey;
+            padding: 12px 12px;
+            margin: 120px auto;
+
+        }
+
+        .all_box {
+            /* border: 2px solid green; */
+            height: 500px;
+            width: 1800px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .box {
+            border: 2px solid black;
+            height: 120px;
+            width: 120px;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        #red {
+            background-color: rgb(255, 0, 0);
+
+        }
+
+        #DarkOrange {
+            background-color: DarkOrange;
+        }
+
+        #green {
+            
+            background-color: green;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+
+        #black {
+            background-color: black;
+            color: white;
+        }
+
+        #grey {
+            background-color: grey;
+        }
+
+        #white {
+            background-color: white;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h1_color">
+
+        <h1>What is your Website color </h1>
+        <div class="all_box">
+
+            <div class="box" id="red">red</div>
+            <div class="box" id="DarkOrange">DarkOrange</div>
+            <div class="box" id="green">green</div>
+            <div class="box" id="black">black</div>
+            <div class="box" id="yellow">yellow</div>
+            <div class="box" id="grey">grey</div>
+            <div class="box" id="white">white</div>
+
+        </div>
+
+
+    </div>
+
+
+
+</body>
+<script>
+
+    const box = document.querySelectorAll('.box')
+    const body = document.querySelector('body')
+
+
+
+    box.forEach(function (box_function) {
+        console.log(box_function)
+        box_function.addEventListener('click', function (e) {
+            // console.log(e)
+            console.log(e.target)
+            if (e.target.id === 'red') {
+                body.style.backgroundColor = e.target.id
+                if(e.target.id === 'red'){
+                    red.style.borderRadius = '22px'
+                    red.style.boxShadow = ' 0px 0px 20px 10px white'
+                    red.style. fontSize = '25px'
+                }
+            }
+
+            if(e.target.id != 'red'){
+                //   black.style.backgroundColor = 'black'
+                //     black.style.color = "white"
+                red.style.borderRadius = '0px'
+                red.style.boxShadow = ' 0px 0px 0px 0px black'
+                red.style. fontSize = '16px'
+            }
+
+
+
+
+
+
+
+
+
+            if (e.target.id === 'DarkOrange') {
+                body.style.backgroundColor = e.target.id
+                if(e.target.id === 'DarkOrange'){
+                    DarkOrange.style.borderRadius = '22px'
+                    DarkOrange.style.boxShadow = ' 0px 0px 20px 10px grey'
+                    DarkOrange.style. fontSize = '22px'
+                }
+
+            }
+            if(e.target.id != 'DarkOrange'){
+                //   black.style.backgroundColor = 'black'
+                //     black.style.color = "white"
+                DarkOrange.style.borderRadius = '0px'
+                DarkOrange.style.boxShadow = ' 0px 0px 0px 0px black'
+                DarkOrange.style. fontSize = '16px'
+            }
+
+
+
+
+
+
+
+
+            if (e.target.id === 'green') {
+                body.style.backgroundColor = e.target.id
+                if(e.target.id === 'green'){
+                    green.style.borderRadius = '22px'
+                    green.style.boxShadow = ' 0px 0px 20px 10px yellow'
+                    green.style. fontSize = '22px'
+                }
+
+            }
+
+            if(e.target.id != 'green'){
+                green.style.borderRadius = '0px'
+                green.style.boxShadow = '0px 0px 0px 0px black'
+                green.style. fontSize = '16px'
+            }
+
+
+
+
+
+            if (e.target.id === 'grey') {
+                body.style.backgroundColor = e.target.id
+                if(e.target.id === 'grey'){
+                    grey.style.borderRadius = '22px'
+                    grey.style.boxShadow = ' 0px 0px 20px 10px DarkOrange'
+                    grey.style. fontSize = '22px'
+                }
+            }
+            if(e.target.id != 'grey'){
+                grey.style.borderRadius = '0px'
+                grey.style.boxShadow = '0px 0px 0px 0px black'
+                grey.style. fontSize = '16px'
+            }
+
+
+
+
+
+            if (e.target.id === 'white') {
+                body.style.backgroundColor = e.target.id
+                if(e.target.id === 'white'){
+                    white.style.borderRadius = '22px'
+                    white.style.boxShadow = ' 0px 0px 20px 10px red'
+                    white.style. fontSize = '22px'
+                }
+            }
+            if(e.target.id != 'white'){
+                white.style.borderRadius = '0px'
+                white.style.boxShadow = '0px 0px 0px 0px black'
+                white.style. fontSize = '16px'
+            }
+
+
+
+
+            
+
+
+            if (e.target.id === 'black') {
+                body.style.backgroundColor = e.target.id
+                if (e.target.id === 'black') {
+                    // black.style.backgroundColor = 'white'
+                    // black.style.color = "black"
+                    black.style.borderRadius = '22px'
+                    black.style.boxShadow = '0px 0px 20px 10px rgb(0, 101, 196)'
+                    black.style. fontSize = '25px'
+                   
+                }
+               
+            }
+
+
+
+            if(e.target.id != 'black'){
+                //   black.style.backgroundColor = 'black'
+                //     black.style.color = "white"
+                    black.style.borderRadius = '0px'
+                    black.style.boxShadow = ' 0px 0px 0px 0px black'
+                    black.style. fontSize = '16px'
+            }
+
+
+
+            if (e.target.id === 'yellow') {
+                body.style.backgroundColor = e.target.id
+                if(e.target.id === 'yellow'){
+                    yellow.style.borderRadius = '22px'
+                    yellow.style.boxShadow = ' 0px 0px 20px 10px green'
+                    yellow.style. fontSize = '22px'
+                }
+            }
+
+            if(e.target.id != 'yellow'){
+                yellow.style.borderRadius = '0px'
+                yellow.style.boxShadow = '0px 0px 0px 0px black'
+                yellow.style. fontSize = '16px'
+            }
+
+        })
+
+    })
+
+
+
+
+</script>
+
+</html>

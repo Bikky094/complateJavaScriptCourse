@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTime Functions</title>
+</head>
+<body>
+    <h1>Chai aur code </h1>
+    <button id="stop">Stop</button>
+
+    <!-- <h2>What is Power</h2>
+    
+    
+    <p>Supra power : <h3 id="ans"></h3></p>
+    <button class="supra">Supra modified</button>
+    <button class="stock">Supra Stock</button> -->
+
+</body>
+<script>
+
+    // setTimeout(function(){                                          //   kuch time bach kaam kiya jata hai .
+    //     console.log('My Name is BikkySingh')
+    // }, 2000)
+
+    const myName = function(){
+        console.log("my name Bikky Singh")
+    }
+    setTimeout(myName, 3000)
+
+
+
+    const changeHeading = function(){
+        document.querySelector('h1').innerHTML = "Chai aur java script"
+
+    }
+    // setTimeout(changeHeading, 3000)   ^^^^^^
+    const changeH = setTimeout(changeHeading, 3000)
+
+
+    const button = document.querySelector('#stop')
+     button.addEventListener('click' , function(){
+        clearTimeout(changeH)
+        console.log('STOPPPED')
+     })
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    // const s_number = function(){
+    //     document.querySelector("#ans").innerHTML = "250 km"
+    // }
+    // setTimeout(s_number, 1000)
+
+    // const m_number = function(){
+    //     document.querySelector('#ans').innerHTML = '450 km'
+    // }
+
+    // document.querySelector('.supra').addEventListener('click',function(){
+    //     setTimeout(m_number, 1000)
+
+    // })
+
+    // const stock_number = document.querySelector('.stock').addEventListener('click', function(){
+    //     setTimeout(s_number, 1000)
+
+    // })
+
+    // if(stock_number === 'click'){
+    // }
+    
+
+
+
+
+
+
+
+</script>
+</html>
