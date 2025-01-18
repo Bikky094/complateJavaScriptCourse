@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 {
+            background-color: rgba(0, 0, 0, 0.638);
+            padding: 12px;
+            text-align: center;
+        }
+
+        button {
+            background-color: rgba(0, 0, 0, 0.638);
+            padding: 8px 23px;
+            border: none;
+            color: white;
+            height: 50px;
+            width: 150px;
+
+        }
+
+        #container {
+            background-color: rgb(50, 50, 50);
+            height: 500px;
+            width: 600px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(52, 52, 52);">
+    <h2>This is a heading</h2>
+    <button id="btn">Button</button>
+
+    <div id="container">
+        <p style="color: rgb(167, 167, 167); font-weight: bolder;" id="login"></p>
+        <p  style="color: rgb(167, 167, 167); font-weight: bolder;" id="id"></p>
+        <p style="color: rgb(167, 167, 167); font-weight: bolder;" id="node_id"></p>
+        <p style="color: rgb(167, 167, 167); font-weight: bolder;" id="avatar_url"></p>
+
+    </div>
+
+</body>
+
+
+<script>
+
+ let container = document.querySelector('#container')
+
+
+
+    document.querySelector('#btn').addEventListener('click', function (e) {
+        console.log(e.target);
+        if(e.target.id === 'btn' ){
+            container.style.display = 'block';
+        }
+
+    });
+
+
+
+
+
+
+
+
+    const login =  document.querySelector('#login')
+    console.log(login)
+    const id =  document.querySelector('#id')
+    console.log(login)
+    const node_id =  document.querySelector('#node_id')
+    console.log(login)
+    const avatar_url =  document.querySelector('#avatar_url')
+    console.log(login)
+
+
+
+
+    const requestUrl = 'https://api.github.com/users/Bikky094'
+
+    const myxml = new XMLHttpRequest()
+    myxml.open('GET', requestUrl)
+    myxml.onreadystatechange = function () {
+        console.log(myxml.readyState);
+        if (myxml.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            const data2 = JSON.parse(this.responseText)
+            const data3 = JSON.parse(this.responseText)
+            const data4 = JSON.parse(this.responseText)
+
+            login.innerHTML =  `${data.login}`
+            id.innerHTML = `${data.id}`
+            node_id.innerHTML = `${data.node_id}`
+            avatar_url.innerHTML = `${data.avatar_url}`
+                
+        }
+
+    }
+    //   puch.avatar_url
+    // id
+    // node_id
+    // avatar_url
+
+    myxml.send()
+
+
+    
+
+
+
+</script>
+
+
+
+
+</html>
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+let loginData = [];
+let idData = [];
+let nodeIdData = [];
+let avatarUrlData = [];
+
+// Example data (replace with your actual data)
+let data = { login: "user123" };
+let data2 = { id: 1 };
+let data3 = { node_id: "node_456" };
+let data4 = { avatar_url: "https://example.com/avatar.jpg" };
+
+// Data ko push karte hain
+loginData.push(data.login);
+idData.push(data2.id);
+nodeIdData.push(data3.node_id);
+avatarUrlData.push(data4.avatar_url);
+
+// HTML mein data display karte hain
+let userDataDiv = document.getElementById('userData');
+userDataDiv.innerHTML = `
+    <p><strong>Login:</strong> ${loginData[0]}</p>
+    <p><strong>ID:</strong> ${idData[0]}</p>
+    <p><strong>Node ID:</strong> ${nodeIdData[0]}</p>
+    <p><strong>Avatar URL:</strong> <img src="${avatarUrlData[0]}" alt="Avatar" width="50"></p>
+`; -->
