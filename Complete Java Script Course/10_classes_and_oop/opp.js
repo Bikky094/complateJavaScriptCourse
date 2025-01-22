@@ -25,12 +25,13 @@ const user = {
 
 
 function User(username, loginCount, isLoggedIn){
-    this.username = username
+    this.myname = username
     this.loginCount = loginCount
     this.isLoggedIn = isLoggedIn
+    const myname = "Bikky"
 
     this.greeting = function(){
-        console.log(`Walcome ${this.username}`)
+        console.log(`Walcome ${this.username} ${this.myname}` )
     }
 
      return this

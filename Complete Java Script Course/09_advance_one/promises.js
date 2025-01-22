@@ -160,26 +160,26 @@ console.log(error)
 
 
 
-// /////////////////////////////////////////////
+/////////////////////////////////////////////
 
 
-// // async function getAllUsers(){
-// //    try {
-// //     const responce = await fetch('https://api.github.com/users/Bikky094')
-// //     const data = await responce.json()
-// //     console.log(data)
-// //    } catch (error) {
-// //     console.log("E: " , error)
-// //    }
-// // }
-
-// // getAllUsers()
-
-
-// fetch('https://api.github.com/users/Bikky094').then((responce) => {
-//     return responce.json()
-// })
-// .then((data)=>{
+// async function getAllUsers(){
+//    try {
+//     const responce = await fetch('https://api.github.com/users/Bikky094')
+//     const data = await responce.json()
 //     console.log(data)
-// })
-// .catch((error)=> console.log(error))
+//    } catch (error) {
+//     console.log("E: " , error)
+//    }
+// }
+
+// getAllUsers()
+
+
+fetch('https://api.github.com/users/Bikky094').then((responce) => {
+    return responce.json()
+})
+.then((data)=>{
+    console.log(data)
+})
+.catch((error)=> console.log(error))
