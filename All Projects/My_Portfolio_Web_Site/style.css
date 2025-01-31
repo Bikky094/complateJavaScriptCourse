@@ -557,7 +557,7 @@ body {
 }
 
 .stn4_all_boxs{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 650px;
     width: 1850px;
     display: flex;
@@ -568,7 +568,7 @@ body {
 }
 
 .stn4_box1{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 170px;
     width: 1500px;
     color: white;
@@ -587,14 +587,14 @@ body {
     padding-bottom: 20px;
 }
 .stn4_box2{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 450px;
     width: 1600px;
 }
 
 
 .stn4_box2{
-    border: 2px solid red;
+    /* border: 2px solid red; */
    color: white;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr  ;
@@ -603,7 +603,7 @@ body {
     text-align: center;
 }
 .boxs_8{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 120px;
     width: 120px;
    
