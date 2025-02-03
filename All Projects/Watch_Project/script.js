@@ -1,19 +1,29 @@
 function scrollLeft() {
-  document.getElementById("scrollable").scrollBy({
-    left: -100, // Adjust scroll speed
-    behavior: "smooth"
-  });
+  let scrollableDiv = document.getElementById("scrollable");
+  
+  // Debugging: Check current scroll position
+  console.log("Before Scroll Left:", scrollableDiv.scrollLeft);
+  
+  // Scroll left only if possible
+  if (scrollableDiv.scrollLeft > 0) {
+    scrollableDiv.scrollBy({
+      left: -100, // Adjust scroll speed
+      behavior: "smooth"
+    });
+  }
 }
 
 function scrollRight() {
-  document.getElementById("scrollable").scrollBy({
+  let scrollableDiv = document.getElementById("scrollable");
+  
+  // Debugging: Check current scroll position
+  console.log("Before Scroll Right:", scrollableDiv.scrollLeft);
+  
+  scrollableDiv.scrollBy({
     left: 100, // Adjust scroll speed
     behavior: "smooth"
   });
 }
-
-
-
 
 
 
