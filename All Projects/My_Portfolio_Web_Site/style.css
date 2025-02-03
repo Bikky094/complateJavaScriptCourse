@@ -746,3 +746,80 @@ body {
 
 
 
+
+
+
+#stn6 {
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+    opacity: 0.9;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: inset 0px 0px 12px 3px rgb(94, 94, 94);
+    transition: all 0.5s ease-in-out;
+}
+
+
+.Scroll_bar_all_items{
+    border: 2px solid red;
+    height: 700px;
+    width: 1700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.scroll_container{
+    width: 400px;
+    border: 2px solid red;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.scroll_content{
+  display: flex;
+
+}
+
+.scroll_box{
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bolder;
+  border-radius: 8px;
+
+}
+
+
+
+
+.left_arrow img{
+    height: 120px;
+    border: 2px solid red;
+    margin: 12px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+
+.right_arrow img{
+    height: 120px;
+    border: 2px solid red;
+    margin: 12px;
+    padding: 0px;
+    cursor: pointer;
+
+
+}
+
